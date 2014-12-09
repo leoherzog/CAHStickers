@@ -47,8 +47,6 @@
 
             #instafeed .likes {
                 background: rgba(222,89,135,0.8);
-                font-family: sans-serif;
-                font-size: 1em;
                 position: absolute;
                 color: #ffffff;
                 right: 5px;
@@ -80,7 +78,7 @@
                 limit: '20',
                 sortBy: 'most-recent',
                 resolution: 'low_resolution',
-                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><h3><div class="likes">&hearts; {{likes}}</div></h3></a>',
                 after: function () {
                     var images = $("#instafeed").find('a');
                     $.each(images, function (index, image) {
