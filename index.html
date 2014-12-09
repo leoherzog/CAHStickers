@@ -79,7 +79,7 @@
                 limit: '20',
                 sortBy: 'most-recent',
                 resolution: 'low_resolution',
-                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}<br />{{location}}</div></a>',
+                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
                 after: function () {
                     var images = $("#instafeed").find('a');
                     $.each(images, function (index, image) {
