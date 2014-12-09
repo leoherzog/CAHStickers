@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="The stickers from Day Two of the Ten Days or Whatever of Kwanzaa | holidaybullshit.com">
+        <meta name="keywords" content="CAHStickers,Cards Against Humanity,Holiday Bullshit,Stickers,Ten Days or Whatever of Kwanzaa">
+        <meta name="author" content="Agent L Productions | agentl.productions">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+        <title>#CAHStickers</title>
+
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="instafeed.min.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            #background {
+                background-color: #333333;
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+            }
+
+            .navbar-brand {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                text-align: center;
+                margin: auto;
+            }
+        </style>
+
+        <script type="text/javascript">
+            var feed = new Instafeed({
+                get: 'tagged',
+                tagName: 'CAHStickers',
+                clientId: '721ffd1b7c1a4e25ab69448e0b8aacf8',
+                limit: '60',
+                sortBy: 'most-recent',
+                resolution: 'low_resolution',
+                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
+                after: function () {
+                    // disable button if no more results to load
+                    if (!this.hasNext()) {
+                        nextButton.setAttribute('disabled', 'disabled');
+                    }
+                },
+            });
+
+            feed.run();
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand">#CAHStickers</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://reddit.com/r/holidaybullshit" target="_blank"><img src="img/reddit.svg" width="24" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <section id="background" data-type="background">
+            <div id="background">
+                <div id="instafeed"></div>
+                <br />
+                <p><a id="nextbutton" onclick="feed.next();" class="btn btn-primary btn-lg">Load More</a></p>
+                <br /><br />
+                <div id="adsense">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9544720367752359"
+                         data-ad-slot="7672866702"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <footer class="row">
+                <div class="panel-footer text-center">
+                    <p><small>&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://agentl.productions" target="_blank">Agent L Productions</a> | Hosted on <a href="https://github.com/xd1936/CAHStickers" target="_blank">Github</a></small></p>
+                </div>
+            </footer>
+        </section>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-57463804-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+
+</html>
+
